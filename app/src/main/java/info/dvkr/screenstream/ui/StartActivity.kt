@@ -2,11 +2,7 @@ package info.dvkr.screenstream.ui
 
 
 import android.app.Activity
-import android.content.ActivityNotFoundException
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
-import android.content.Intent
+import android.content.*
 import android.graphics.Point
 import android.media.projection.MediaProjectionManager
 import android.net.Uri
@@ -180,6 +176,22 @@ class StartActivity : BaseActivity(), StartView {
         toggleButtonStartStop.isEnabled = false
         textViewConnectedClients.text = getString(R.string.start_activity_connected_clients).format(0)
         textViewCurrentTraffic.text = getString(R.string.start_activity_current_traffic).format(0f)
+
+        btnVideo.setOnClickListener {
+
+            val intent = Intent()
+            intent.action = Intent.ACTION_GET_CONTENT
+            intent.type = "*/*"
+            startActivity(intent)
+
+        }
+
+        btnFiles.setOnClickListener {
+            val intent = Intent()
+            intent.action = Intent.ACTION_GET_CONTENT
+            intent.type = "file/*"
+            startActivity(intent)
+        }
 
         toggleButtonStartStop.setOnClickListener { _ ->
             if (toggleButtonStartStop.isChecked) {

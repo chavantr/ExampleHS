@@ -91,10 +91,12 @@
 
             <ToggleButton
                 android:id="@+id/toggleButtonStartStop"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="16dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
                 android:paddingEnd="@dimen/activity_start_toggle_button_padding"
                 android:paddingStart="@dimen/activity_start_toggle_button_padding"
                 android:textAllCaps="true"
@@ -123,6 +125,28 @@
                 android:text="@string/start_activity_connected_clients"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@color/colorPrimaryText" />
+
+
+            <Button
+                android:id="@+id/btnVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="18dp"
+                android:text="Open Video" />
+
+
+            <Button
+                android:id="@+id/btnFiles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="18dp"
+                android:text="Open Files" />
+
+
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
